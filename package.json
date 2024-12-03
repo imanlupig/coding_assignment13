@@ -55,9 +55,28 @@
     "@storybook/react": "^8.3.6",
     "@storybook/react-webpack5": "^8.3.6",
     "@storybook/test": "^8.3.6",
+    "eslint": "^8.57.1",
     "eslint-plugin-storybook": "^0.10.1",
+    "husky": "^9.1.7",
+    "jest": "^27.5.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
     "prop-types": "^15.8.1",
     "storybook": "^8.3.6",
     "webpack": "^5.95.0"
-  }
+  },
+  "lint-staged": {
+  "*.ts": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "*.tsx": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "*.js": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
 }
