@@ -13,3 +13,7 @@ This repository contains a React component library along with Storybook for visu
 ```bash
 git clone <your-repo-url>
 cd <your-repo-directory>
+
+docker build -t imanlupig_coding_assignment13 .
+
+docker run -p 8018:8018 --name imanlupig_coding_assignment13 imanlupig_coding_assignment13
