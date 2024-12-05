@@ -2,7 +2,7 @@
 FROM node:22-alpine
 
 # Set the working directory
-WORKDIR /component-library_imanlupig
+WORKDIR /imanlupig_ui_garden_build_checks
 
 # Copy package.json and install dependencies
 COPY package*.json ./

@@ -23,7 +23,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks" : {
+      "pre-commit" : "npm run lint && npm run format && git add -A && npm test"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -66,17 +73,17 @@
     "webpack": "^5.95.0"
   },
   "lint-staged": {
-  "*.ts": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "*.tsx": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "*.js": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.tsx": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
